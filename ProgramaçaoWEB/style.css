@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+
+    --cor-principal: rgb(239, 180, 149);
+    --cor-secundaria: #EFD595;
+    --cor-cabecalho: #D3756B;
+    --cor-texto-branco: #FFFFFF;
+    --cor-texto-principal: #E8860B;
+    --cor-textos-adjacentes: #000000;
+    --fonte-principal: "Edwardian Script ITC";
+    --fonte-secundaria: 'Gabriola';
+}
+
+
+
+body{
+    background-image: url(img/NoivaCapa2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-color: var(--cor-principal); 
+
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    /* "header2 header2 header2" */
+    "main main main"
+    "footer footer footer";
+    grid-gap: 2.5rem; /* aqui, crio espaços entre as linhas */
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 70vh auto;
+}
+
+.cabecalho1{
+    grid-area: header;
+    padding: 0.5rem;
+    background-color: var(--cor-cabecalho) !important;
+}
+.capa{
+    grid-area: main;
+    background-color: rgba(239, 180, 149,0.3);
+    text-align: center;
+
+}
+
+h1, h2 {
+    color: black;
+}
+.rodape{
+    grid-area: footer;
+    padding: 1rem;
+    font-size: 25px;
+    color: var(--cor-principal);
+    font-family: var(--fonte-secundaria);  
+}
+
+.cabecalho1, .rodape{
+    background: var(--cor-principal);
+    
+}
+
+.conteudo a{
+    text-decoration: none;
+    color: var(--cor-texto-branco);
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 1rem;
+}
+.cabecalho1__conteudo{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: var(--cor-texto-principal)
+}
+.rodape__conteudo{
+    list-style: none;
+    display: flex;
+    text-align: left;
+    font-size: 25px;
+    color: var(--cor-texto-principal);
+    
+}
+.icone{
+    scale: 1;
+    height: 50px;
+}
+
+.rodape__conteudo2{
+    display: flex;
+    list-style: none;
+    text-align: right;
+    justify-content: right;
+    font-size: 25px;
+    color: var(--cor-texto-principal);
+}
+.contatos{
+    color: var(--cor-texto-principal);
+    font-size: 25px;
+}
+
+.conteudo2 a{
+    text-decoration: none;
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 1rem;
+
+}
+
+
+.texto-escondido {
+    opacity: 0; /* Começa com opacidade 0 (invisível) */
+    animation: aparecer 2s forwards; /* Animação de 2 segundos chamada "aparecer" */
+    color: var(--cor-textos-adjacentes);
+    font-family: var(--fonte-principal);
+    font-weight: 900;
+    font-size: 40px;
+}
+  
+  @keyframes aparecer {
+    from {
+      opacity: 0; /* Começa com opacidade 0 (invisível) */
+    }
+    to {
+      opacity: 1; /* Termina com opacidade 1 (totalmente visível) */
+    }
+  }
+  .texto-escondido2 {
+    opacity: 0; /* Começa com opacidade 0 (invisível) */
+    animation: aparecer 10s forwards; /* Animação de 2 segundos chamada "aparecer" */
+    color: var(--cor-textos-adjacentes);
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    font-size: 24px;
+}
+  
+  @keyframes aparecer {
+    from {
+      opacity: 0; /* Começa com opacidade 0 (invisível) */
+    }
+    to {
+      opacity: 1; /* Termina com opacidade 1 (totalmente visível) */
+    }
+  }
